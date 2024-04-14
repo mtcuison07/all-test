@@ -39,7 +39,7 @@ public class ModelSysColumn {
         
         ResultSet loRS = instance.executeQuery(lsSQL);
         try {
-            if (MiscUtil.resultSet2XML(loRS, System.getProperty("sys.default.path.metadata"))){
+            if (MiscUtil.resultSet2XML(instance, loRS, System.getProperty("sys.default.path.metadata"), "xxxSysColumn", "")){
                 System.out.println("ResultSet exported.");
             }
         } catch (SQLException e) {

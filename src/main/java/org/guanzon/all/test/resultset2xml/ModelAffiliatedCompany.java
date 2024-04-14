@@ -5,26 +5,26 @@ import java.sql.SQLException;
 import org.guanzon.appdriver.base.GRider;
 import org.guanzon.appdriver.base.MiscUtil;
 
-public class ModelBanks {
+public class ModelAffiliatedCompany {
     public static void main (String [] args){
-        System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/Model_Banks.xml");
+        System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/Model_Affiliated_Company.xml");
         
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  sBankIDxx" +
-                            ", sBankName" +
-                            ", sBankCode" +
+                            "  sCompnyCd" +
+                            ", sCompnyNm" +
+                            ", dAffiliat" +
                             ", cRecdStat" +
                             ", sModified" +
-                            ", dModified" +
-                        " FROM Banks" + 
+                            ", dModified" + 
+                        " FROM Affiliated_Company" + 
                         " WHERE 0=1";
         
         
         ResultSet loRS = instance.executeQuery(lsSQL);
         try {
-            if (MiscUtil.resultSet2XML(instance, loRS, System.getProperty("sys.default.path.metadata"), "Banks", "")){
+            if (MiscUtil.resultSet2XML(instance, loRS, System.getProperty("sys.default.path.metadata"), "Affiliated_Company", "")){
                 System.out.println("ResultSet exported.");
             }
         } catch (SQLException e) {
