@@ -21,10 +21,18 @@ public class testModelBanks {
             System.exit(1);
         }
         
-        model.setBankID("M00124001");
-        model.setBankName("Banco De Oro");
-        model.setBankCode("BDO");
-        model.setActive(true);
+        json = model.setBankName("Banco De Oro");
+        if ("error".equals((String) json.get("result"))){
+            System.err.println((String) json.get("message"));
+            System.exit(1);
+        }
+        
+        json = model.setBankCode("Banco De Oro");
+        if ("error".equals((String) json.get("result"))){
+            System.err.println((String) json.get("message"));
+            System.exit(1);
+        }
+        
         model.setModifiedBy(instance.getUserID());
         model.setModifiedDate(instance.getServerDate());
         json = model.saveRecord();
