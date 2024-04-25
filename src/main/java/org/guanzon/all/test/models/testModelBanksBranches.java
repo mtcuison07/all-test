@@ -47,8 +47,8 @@ public class testModelBanksBranches {
             System.err.println((String) json.get("message"));
             System.exit(1);
         } else {
-            model.setBankBranchLandine("0755220202");
-            model.setBankBranchFaxNo("0755150202");
+//            model.setBankBranchLandine("0755220202");
+//            model.setBankBranchFaxNo("0755150202");
             
             json = model.saveRecord();
             if (!"success".equals((String) json.get("result"))){

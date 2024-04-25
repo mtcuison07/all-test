@@ -8,5 +8,7 @@ public class testBanks {
         System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/");
         
         GRider instance = MiscUtil.Connect();
+        
+        
     }
 }
