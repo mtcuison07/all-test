@@ -39,7 +39,7 @@ public class ModelInventory {
                             ", a.cSerialze" +
                             ", a.cUnitType" +
                             ", a.cInvStatx" +
-                            ", a.cWthExprt" +
+                            ", a.nShlfLife" +
                             ", a.sSupersed" +
                             ", a.cRecdStat" +
                             ", a.sModified" +

@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import org.guanzon.appdriver.base.GRider;
 import org.guanzon.appdriver.base.MiscUtil;
 
-public class ModelSupplierAccreditation {
+public class ModelAccountClientAccreditation {
     public static void main (String [] args){
-        System.setProperty("sys.table", "Supplier_Accreditation");
+        System.setProperty("sys.table", "Account_Client_Acccreditation");
         System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/Model_" + System.getProperty("sys.table") + ".xml");
         
         GRider instance = MiscUtil.Connect();
@@ -15,6 +15,7 @@ public class ModelSupplierAccreditation {
         String lsSQL ="SELECT" +
                             "  a.sTransNox" +
                             ", a.dTransact" +
+                            ", a.cAcctType" +
                             ", a.sClientID" +
                             ", a.sContctID" +
                             ", a.sRemarksx" +
