@@ -5,27 +5,22 @@ import java.sql.SQLException;
 import org.guanzon.appdriver.base.GRider;
 import org.guanzon.appdriver.base.MiscUtil;
 
-public class ModelInvLocation {
+public class ModelSection {
     public static void main (String [] args){
-        System.setProperty("sys.table", "Inv_Location");
+        System.setProperty("sys.table", "Section");
         System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/Model_" + System.getProperty("sys.table") + ".xml");
         
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  a.sLocatnCd" +
-                            ", a.sDescript" +
-                            ", a.sWHouseID" +
-                            ", a.sSectnIDx" +
-                            ", a.cRecdStat" +
-                            ", a.sModified" +
-                            ", a.dModified" +
-                            ", b.sWHouseNm xWHouseNm" +
-                            ", c.sSectnNme xSectnNme" +
-                        " FROM " + System.getProperty("sys.table") + " a" +
-                            " LEFT JOIN Warehouse b ON a.sWHouseID = b.sWHouseID" +
-                            " LEFT JOIN Section c ON a.sSectnIDx = c.sSectnIDx" +
+                            "  sSectnIDx" +
+                            ", sSectnNme" +	
+                            ", cRecdStat" +
+                            ", sModified" +	
+                            ", dModified" +
+                        " FROM " + System.getProperty("sys.table") + 
                         " WHERE 0=1";
+        
         
         ResultSet loRS = instance.executeQuery(lsSQL);
         try {
