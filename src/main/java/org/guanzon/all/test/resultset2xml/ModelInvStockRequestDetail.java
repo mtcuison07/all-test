@@ -35,12 +35,14 @@ public class ModelInvStockRequestDetail {
                             ", a.dModified" +
                             ", b.sBarCodex xBarCodex" +
                             ", b.sDescript xDescript" +
-                            ", c.sDescript xCategrNm" +
+                            ", c.sDescript xCategr01" +
+                            ", d.sDescript xCategr02" +
                             ", d.sDescript xInvTypNm" +
                         " FROM " + System.getProperty("sys.table") + " a" + 
                             " LEFT JOIN Inventory b ON a.sStockIDx = b.sStockIDx" +
                             " LEFT JOIN Category c ON b.sCategCd1 = c.sCategrCd" +
-                            " LEFT JOIN Inv_Type d ON c.sInvTypCd = d.sInvTypCd" +
+                            " LEFT JOIN Category_Level2 d ON b.sCategCd2 = d.sCategrCd" +
+                            " LEFT JOIN Inv_Type e ON d.sInvTypCd = e.sInvTypCd" +
                         " WHERE 0=1";
         
         
