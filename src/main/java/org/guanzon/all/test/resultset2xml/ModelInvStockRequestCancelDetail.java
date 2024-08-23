@@ -5,39 +5,31 @@ import java.sql.SQLException;
 import org.guanzon.appdriver.base.GRider;
 import org.guanzon.appdriver.base.MiscUtil;
 
-public class ModelInvStockRequestMaster {
+public class ModelInvStockRequestCancelDetail {
     public static void main (String [] args){
-        System.setProperty("sys.table", "Inv_Stock_Request_Master");
+        System.setProperty("sys.table", "Inv_Stock_Req_Cancel_Detail");
         System.setProperty("sys.default.path.metadata", "D:/GGC_Maven_Systems/config/metadata/Model_" + System.getProperty("sys.table") + ".xml");
         
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
                             "  a.sTransNox" +
-                            ", a.sBranchCd" +
-                            ", a.sCategrCd" +
-                            ", a.dTransact" +
-                            ", a.sReferNox" +
-                            ", a.sRemarksx" +
-                            ", a.sIssNotes" +
-                            ", a.nCurrInvx" +
-                            ", a.nEstInvxx" +
-                            ", a.sApproved" +
-                            ", a.dApproved" +
-                            ", a.sAprvCode" +
                             ", a.nEntryNox" +
-                            ", a.sSourceCd" +
-                            ", a.sSourceNo" +
-                            ", a.cConfirmd" +
-                            ", a.cTranStat" +
-                            ", a.dStartEnc" +
-                            ", a.sModified" +
+                            ", a.sOrderNox" +
+                            ", a.sStockIDx" +
+                            ", a.nQuantity" +
+                            ", a.sNotesxxx" +
                             ", a.dModified" +
-                            ", b.sBranchNm xBranchNm" +
-                            ", c.sDescript xCategrNm" +
+                            ", b.sBarCodex xBarCodex" +
+                            ", b.sDescript xDescript" +
+                            ", c.sDescript xCategr01" +
+                            ", d.sDescript xCategr02" +
+                            ", d.sDescript xInvTypNm" +
                         " FROM " + System.getProperty("sys.table") + " a" + 
-                            " LEFT JOIN Branch b ON a.sBranchCd= b.sBranchCd" +
-                            " LEFT JOIN Category c ON a.sCategrCd = c.sCategrCd" +
+                            " LEFT JOIN Inventory b ON a.sStockIDx = b.sStockIDx" +
+                            " LEFT JOIN Category c ON b.sCategCd1 = c.sCategrCd" +
+                            " LEFT JOIN Category_Level2 d ON b.sCategCd2 = d.sCategrCd" +
+                            " LEFT JOIN Inv_Type e ON d.sInvTypCd = e.sInvTypCd" +
                         " WHERE 0=1";
         
         
