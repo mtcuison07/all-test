@@ -13,19 +13,18 @@ public class ModelModel {
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  a.sModelCde" +
-                            ", a.sCategrCd" +
-                            ", a.sModelNme" +
+                            "  a.sModelIDx" +
+                            ", a.sModelCde" +
                             ", a.sDescript" +
-                            ", a.sBriefDsc" +
                             ", a.sBrandCde" +
+                            ", a.sSeriesID" +
+                            ", a.sVrntIDxx" +
+                            ", a.nYearModl" +
                             ", a.cEndOfLfe" +
                             ", a.cRecdStat" +
                             ", a.sModified" +
                             ", a.dModified" +
-                            ", b.sDescript xBrandNme" +
                         " FROM " + System.getProperty("sys.table") + " a" +
-                            " LEFT JOIN Brand b ON a.sBrandCde = b.sBrandCde" +
                         " WHERE 0=1";
         
         
@@ -35,7 +34,7 @@ public class ModelModel {
                                         , loRS
                                         , System.getProperty("sys.default.path.metadata")
                                         , System.getProperty("sys.table")
-                                        , "xBrandNme")){
+                                        , "")){
                 
                 System.out.println("ResultSet exported.");
             }

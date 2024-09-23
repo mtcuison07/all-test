@@ -15,13 +15,10 @@ public class ModelCategoryLevel4 {
         String lsSQL = "SELECT" +
                             "  a.sCategrCd" +
                             ", a.sDescript" +
-                            ", a.sMainCatx" +
                             ", a.cRecdStat" +
                             ", a.sModified" +
                             ", a.dModified" +
-                            ", b.sDescript xMainCatx" +
                         " FROM " + System.getProperty("sys.table") + " a" + 
-                            " LEFT JOIN Category b ON a.sMainCatx = b.sCategrCd" +
                         " WHERE 0=1";
         
         

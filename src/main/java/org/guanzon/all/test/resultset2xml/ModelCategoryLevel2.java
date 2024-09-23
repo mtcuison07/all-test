@@ -17,6 +17,7 @@ public class ModelCategoryLevel2 {
                             ", a.sDescript" +
                             ", a.sInvTypCd" +
                             ", a.sMainCatx" +
+                            ", a.cClassify" +
                             ", a.cRecdStat" +
                             ", a.sModified" +
                             ", a.dModified" +

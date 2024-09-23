@@ -15,14 +15,10 @@ public class ModelCategory {
         String lsSQL = "SELECT" +
                             "  a.sCategrCd" +
                             ", a.sDescript" +
-                            ", a.sInvTypCd" +
-                            ", a.cClassify" +
                             ", a.cRecdStat" +
                             ", a.sModified" +
                             ", a.dModified" +
-                            ", b.sDescript xInvTypNm" +
                         " FROM " + System.getProperty("sys.table") + " a" + 
-                            " LEFT JOIN Inv_Type b ON a.sInvTypCd = b.sInvTypCd" +
                         " WHERE 0=1";
         
         

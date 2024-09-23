@@ -13,7 +13,7 @@ public class ModelColor {
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  sColorCde" +
+                            "  sColorIDx" +
                             ", sDescript" +
                             ", cRecdStat" +
                             ", sModified" +

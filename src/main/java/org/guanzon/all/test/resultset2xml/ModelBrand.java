@@ -13,7 +13,7 @@ public class ModelBrand {
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  a.sBrandCde" +
+                            "  a.sBrandIDx" +
                             ", a.sDescript" +
                             ", a.sCategrCd" +
                             ", a.cRecdStat" +

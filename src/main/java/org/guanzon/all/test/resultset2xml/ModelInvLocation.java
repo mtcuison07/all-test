@@ -13,7 +13,7 @@ public class ModelInvLocation {
         GRider instance = MiscUtil.Connect();
         
         String lsSQL = "SELECT" +
-                            "  a.sLocatnCd" +
+                            "  a.sLocatnID" +
                             ", a.sDescript" +
                             ", a.sWHouseID" +
                             ", a.sSectnIDx" +

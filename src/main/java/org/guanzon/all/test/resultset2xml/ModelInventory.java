@@ -22,10 +22,11 @@ public class ModelInventory {
                             ", a.sCategCd2" +
                             ", a.sCategCd3" +
                             ", a.sCategCd4" +
-                            ", a.sBrandCde" +
-                            ", a.sModelCde" +
-                            ", a.sColorCde" +
+                            ", a.sBrandIDx" +
+                            ", a.sModelIDx" +
+                            ", a.sColorIDx" +
                             ", a.sMeasurID" +
+                            ", a.sInvTypCd" +
                             ", a.nUnitPrce" +
                             ", a.nSelPrice" +
                             ", a.nDiscLev1" +
@@ -61,9 +62,9 @@ public class ModelInventory {
                             " LEFT JOIN Category_Level2 c ON a.sCategCd2 = c.sCategrCd" +
                             " LEFT JOIN Category_Level3 d ON a.sCategCd3 = c.sCategrCd" +
                             " LEFT JOIN Category_Level4 e ON a.sCategCd4 = c.sCategrCd" +
-                            " LEFT JOIN Brand f ON a.sBrandCde = f.sBrandCde" +
-                            " LEFT JOIN Model g ON a.sModelCde = g.sModelCde" +
-                            " LEFT JOIN Color h ON a.sColorCde = h.sColorCde" +
+                            " LEFT JOIN Brand f ON a.sBrandIDx = f.sBrandIDx" +
+                            " LEFT JOIN Model g ON a.sModelIDx = g.sModelIDx" +
+                            " LEFT JOIN Color h ON a.sColorIDx = h.sColorIDx" +
                             " LEFT JOIN Measure i ON a.sMeasurID = i.sMeasurID" +
                             " LEFT JOIN Inv_Type j ON c.sInvTypCd = j.sInvTypCd" +
                             " LEFT JOIN Inventory k ON a.sSupersed = k.sStockIDx" +
