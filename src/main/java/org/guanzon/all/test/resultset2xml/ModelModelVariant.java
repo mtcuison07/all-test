@@ -16,7 +16,7 @@ public class ModelModelVariant {
                             "  sVrntIDxx" +
                             ", sVrntName" +
                             ", sDescript" +
-                            ", sBrandCde" + 
+                            ", sBrandIDx" + 
                             ", cRecdStat" +
                             ", sModified" +
                             ", dModified" +

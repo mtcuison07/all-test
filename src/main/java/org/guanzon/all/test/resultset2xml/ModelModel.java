@@ -16,7 +16,7 @@ public class ModelModel {
                             "  a.sModelIDx" +
                             ", a.sModelCde" +
                             ", a.sDescript" +
-                            ", a.sBrandCde" +
+                            ", a.sBrandIDx" +
                             ", a.sSeriesID" +
                             ", a.sVrntIDxx" +
                             ", a.nYearModl" +

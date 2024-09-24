@@ -19,9 +19,7 @@ public class ModelBrand {
                             ", a.cRecdStat" +
                             ", a.sModified" +
                             ", a.dModified" +
-                            ", b.sDescript xCategrNm" +
                         " FROM " + System.getProperty("sys.table") + " a" + 
-                            " LEFT JOIN Category b ON a.sCategrCd = b.sCategrCd" +
                         " WHERE 0=1";
         
         
@@ -31,7 +29,7 @@ public class ModelBrand {
                                         , loRS
                                         , System.getProperty("sys.default.path.metadata")
                                         , System.getProperty("sys.table")
-                                        , "xCategrNm")){
+                                        , "")){
                 
                 System.out.println("ResultSet exported.");
             }

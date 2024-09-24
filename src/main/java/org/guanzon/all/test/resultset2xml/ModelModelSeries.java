@@ -15,7 +15,7 @@ public class ModelModelSeries {
         String lsSQL = "SELECT" +
                             "  sSeriesID" +
                             ", sDescript" +
-                            ", sBrandCde" +
+                            ", sBrandIDx" +
                             ", cEndOfLfe" +
                             ", cRecdStat" +
                             ", sModified" +
