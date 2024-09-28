@@ -24,9 +24,8 @@ public class ModelPOMaster {
                             ", a.sReferNox" +
                             ", a.sTermCode" +
                             ", a.nTranTotl" +
+                            ", a.cVATaxabl" +
                             ", a.nVatRatex" +
-                            ", a.nVatAmtxx" +
-                            ", a.cVATAdded" +
                             ", a.nTWithHld" +
                             ", a.nDiscount" +
                             ", a.nAddDiscx" +
@@ -39,9 +38,7 @@ public class ModelPOMaster {
                             ", a.nEmailSnt" +
                             ", a.nEntryNox" +
                             ", a.sCategrCd" +
-                            ", a.cPOTypexx" +
                             ", a.cTranStat" +
-                            ", a.sPrepared" +
                             ", a.dPrepared" +
                             ", a.sApproved" +
                             ", a.dApproved" +
@@ -60,7 +57,6 @@ public class ModelPOMaster {
                             ", d.sMobileNo xCPMobil1" +
                             ", e.sDescript xTermName" +
                             ", f.sDescript xCategrNm" +
-                            ", g.sDescript xInvTypNm" +
                         " FROM " + System.getProperty("sys.table") + " a"+ 
                             " LEFT JOIN Client_Master b ON a.sSupplier = b.sClientID" +
                             " LEFT JOIN Client_Address c" +
@@ -69,9 +65,7 @@ public class ModelPOMaster {
                             " ON a.sAddrssID = c.sAddrssID" +
                             " LEFT JOIN Client_Institution_Contact_Person d ON a.sContctID = d.sContctID" +
                             " LEFT JOIN Term e ON a.sTermCode = e.sTermCode" +
-                            " LEFT JOIN Category f" +
-                                    " LEFT JOIN Inv_Type g ON f.sInvTypCd = g.sInvTypCd" +
-                            " ON a.sCategrCd = f.sCategrCd" +
+                            " LEFT JOIN Category f ON a.sCategrCd = f.sCategrCd" +
                             " LEFT JOIN Branch j ON a.sBranchCd = j.sBranchCd" +
                             " LEFT JOIN Branch k ON a.sDestinat = k.sBranchCd" +
                             " LEFT JOIN Company l ON a.sCompnyID = l.sCompnyID" +

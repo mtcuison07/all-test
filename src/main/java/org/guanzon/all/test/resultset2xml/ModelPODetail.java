@@ -18,13 +18,11 @@ public class ModelPODetail {
                             ", a.sStockIDx" +
                             ", a.sDescript" +
                             ", a.nQtyOnHnd" +
-                            ", a.nROQQtyxx" +
-                            ", a.nOrderQty" +
+                            ", a.nRecOrder" +
                             ", a.nQuantity" +
                             ", a.nUnitPrce" +
                             ", a.nReceived" +
-                            ", a.nCancelld" +
-                            ", a.dModified" +
+                            ", a.nCancelld" +                            
                             ", c.sDescript xCategrNm" +
                             ", d.sDescript xInvTypNm" +
                         " FROM " + System.getProperty("sys.table") + " a"+ 
